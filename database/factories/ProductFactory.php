@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
  */
-class CategoryFactory extends Factory
+class ProductFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,7 +19,8 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => Str::random(50),
-            'parent_id' =>rand(0, 5)
+            'category_id' =>rand(1, 10),
+            'quantity' => rand(1, 100)
         ];
     }
 }

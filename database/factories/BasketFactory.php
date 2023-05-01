@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Basket>
  */
-class CategoryFactory extends Factory
+class BasketFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,8 +17,7 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => Str::random(50),
-            'parent_id' =>rand(0, 5)
+            'user_id' => 1
         ];
     }
 }
